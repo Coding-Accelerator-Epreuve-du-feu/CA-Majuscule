@@ -1,16 +1,16 @@
 #! node
 /* Afficher une lettre sur deux en majuscule. */
 
-if (typeof process.argv[2] !== "string") {
-  console.log("Veuillez indiquer au script, un string en argument");
-}
-console.log(typeof process.argv[2]);
-
 let argument = process.argv[2];
 let sent = "";
 let space = 0;
 
-for(i = 0; i < argument.length; i++) {
+parseInt(argument);
+
+if (typeof argument !== 'string') {
+  console.log("Veuillez indiquer au script, un string en argument");
+} else {
+  for(i = 0; i < argument.length; i++) {
   let num = i + space;
   if (process.argv[2][i] === " ") {
   space += 1;
@@ -22,3 +22,7 @@ for(i = 0; i < argument.length; i++) {
 }
 }
 console.log(sent);
+
+}
+
+console.log(typeof argument);
